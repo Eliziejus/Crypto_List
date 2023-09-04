@@ -40,3 +40,10 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# Ignore the Angular configuration file
+/angular.json
+.angular-cli.json
+
+# Ignore the Node.js package lock file
+/package-lock.json
