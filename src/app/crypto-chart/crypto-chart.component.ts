@@ -14,7 +14,7 @@ export class CryptoChartComponent implements OnInit {
 
   constructor(private http: HttpClient) {}
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
     this.fetchChartData();
   }
 
@@ -32,9 +32,8 @@ export class CryptoChartComponent implements OnInit {
     });
   }
 
-onCryptoChange(selectedCrypto: string) {
+ public onCryptoChange(selectedCrypto: string) {
   this.selectedCrypto = selectedCrypto;
   this.fetchChartData();
 }
-
 }
