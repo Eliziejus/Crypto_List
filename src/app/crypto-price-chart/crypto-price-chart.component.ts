@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { single } from '../data';
 
 @Component({
   selector: 'app-crypto-price-chart',
@@ -7,19 +6,18 @@ import { single } from '../data';
   styleUrls: ['./crypto-price-chart.component.scss']
 })
 export class CryptoPriceChartComponent {
-  @Input() selectedCryptoData: any; // Input property to receive selected cryptocurrency data
+  @Input() selectedCryptoData: any; 
 
-  // Chart data format (you may adjust it based on your data)
   single: any[] = [];
 
   constructor() {}
 
-  ngOnChanges(): void {
+  public ngOnChanges(): void {
     this.updateChartData();
   }
 
-  updateChartData(): void {
-    // Format your data for the chart here
+  public updateChartData(): void {
+
     if (this.selectedCryptoData) {
       this.single = [
         {
