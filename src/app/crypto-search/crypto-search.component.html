@@ -1,0 +1,14 @@
+<div class="crypto-search">
+    <label for="cryptoSearch">Search for a Cryptocurrency:</label>
+    <input
+      id="cryptoSearch"
+      [(ngModel)]="selectedCrypto"
+      (ngModelChange)="onSelectCrypto()"
+      list="cryptoOptions"
+      placeholder="Start typing..."
+    />
+    <datalist id="cryptoOptions">
+      <option *ngFor="let option of cryptoOptions" [value]="option"></option>
+    </datalist>
+  </div>
+  

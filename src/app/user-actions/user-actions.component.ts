@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
-  selector: 'app-user-actions',
-  templateUrl: './user-actions.component.html',
-  styleUrls: ['./user-actions.component.scss']
+  selector: 'app-user-action',
+  template: '<button>Log User Action</button>',
 })
-export class UserActionsComponent {
+export class UserActionComponent {
 
 }
