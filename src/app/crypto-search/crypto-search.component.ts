@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-crypto-search',
   templateUrl: './crypto-search.component.html',
-  styleUrls: ['./crypto-search.component.css']
+  styleUrls: ['./crypto-search.component.scss']
 })
 export class CryptoSearchComponent implements OnInit {
   cryptoOptions: string[] = [];
