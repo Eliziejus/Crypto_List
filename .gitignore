@@ -47,3 +47,7 @@ Thumbs.db
 
 # Ignore the Node.js package lock file
 /package-lock.json
+
+# Ignore Node.js modules and dependencies
+node_modules/
+
