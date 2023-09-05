@@ -1,7 +1,15 @@
-<div class="crypto-chart-container">
-    <h2>Cryptocurrency Price Chart</h2>
-    <app-crypto-search (cryptoSelected)="onCryptoChange($event)"></app-crypto-search>
-    <div class="crypto-chart">
+<div class="container mt-5">
+  <h2 class="text-center mb-4">Cryptocurrency Price Chart</h2>
+  
+  <div class="row">
+    <div class="col-md-6">
+      <app-crypto-search (cryptoSelected)="onCryptoChange($event)"></app-crypto-search>
     </div>
   </div>
-  
+
+  <div class="row mt-4">
+    <div class="col">
+      <app-crypto-price-chart [selectedCryptoData]="chartData"></app-crypto-price-chart>
+    </div>
+  </div>
+</div>

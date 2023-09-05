@@ -7,18 +7,22 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { CryptoChartComponent } from './crypto-chart/crypto-chart.component';
 import { CryptoSearchComponent } from './crypto-search/crypto-search.component';
+import { CryptoPriceChartComponent } from './crypto-price-chart/crypto-price-chart.component';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 @NgModule({
   declarations: [
     AppComponent,
     CryptoChartComponent,
-    CryptoSearchComponent
+    CryptoSearchComponent,
+    CryptoPriceChartComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgxChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

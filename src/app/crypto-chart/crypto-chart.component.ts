@@ -10,6 +10,7 @@ export class CryptoChartComponent implements OnInit {
   selectedCrypto = '';
   cryptoOptions: string[] = [];
   chartData: any;
+  selectedCryptoData: any;
 
   constructor(private http: HttpClient) {}
 
@@ -17,7 +18,7 @@ export class CryptoChartComponent implements OnInit {
     this.fetchChartData();
   }
 
-  fetchChartData() {
+ public fetchChartData() {
     const vsCurrency = 'usd';
     const fromTimestamp = Math.floor(Date.now() / 1000) - 24 * 3600; 
     const toTimestamp = Math.floor(Date.now() / 1000);
@@ -26,6 +27,8 @@ export class CryptoChartComponent implements OnInit {
   
     this.http.get(apiUrl).subscribe((data: any) => {
       this.chartData = data;
+
+      this.selectedCryptoData = data;
     });
   }
 
