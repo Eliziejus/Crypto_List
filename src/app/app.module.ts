@@ -3,18 +3,22 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CryptoPricesComponent } from './crypto-prices/crypto-prices.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { CryptoChartComponent } from './crypto-chart/crypto-chart.component';
+import { CryptoSearchComponent } from './crypto-search/crypto-search.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CryptoPricesComponent
+    CryptoChartComponent,
+    CryptoSearchComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
