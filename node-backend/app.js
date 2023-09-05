@@ -11,9 +11,9 @@ app.get('/prices', async (req, res) => {
   try {
     const response = await axios.get('https://api.coingecko.com/api/v3/coins/markets', {
       params: {
-        vs_currency: 'usd', // You can change the currency if needed
+        vs_currency: 'usd',
         order: 'market_cap_desc',
-        per_page: 100, // Adjust the number of coins per page
+        per_page: 100,
         page: 1,
         sparkline: false,
       },
